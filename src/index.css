@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4f46e5aa transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Poppins", system-ui, sans-serif;
+  background-color: #06060a;
+  color: #f4f4f5;
+  overflow-x: hidden;
+}
+
+html.dark body {
+  background-color: #06060a;
+  color: #f4f4f5;
+}
+
+html:not(.dark) body {
+  background-color: #f5f6fb;
+  color: #0b0b12;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6366f1, #22d3ee);
+  border-radius: 999px;
+}
+
+::selection {
+  background: #6366f1;
+  color: white;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.glow-text {
+  text-shadow: 0 0 40px rgba(99, 102, 241, 0.45);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.noscroll-canvas {
+  touch-action: none;
+}
+
+/* ---------------------------------------------------------------- */
+/* Light mode re-theme                                                */
+/* The app is authored "dark-first" (default premium glass look).     */
+/* When html does NOT have the `.dark` class we retheme core utility  */
+/* classes so every page gets a crisp, legible light appearance       */
+/* without needing per-component light/dark variants everywhere.      */
+/* ---------------------------------------------------------------- */
+html:not(.dark) body {
+  background: linear-gradient(180deg, #f6f7fb 0%, #eef0f8 100%);
+  color: #0f1115;
+}
+
+html:not(.dark) .bg-\[\#06060a\],
+html:not(.dark) .bg-\[\#05050a\],
+html:not(.dark) .bg-\[\#0a0a12\],
+html:not(.dark) .bg-\[\#0a0a10\] {
+  background-color: #f6f7fb !important;
+}
+
+html:not(.dark) .bg-\[\#07070c\]\/80 {
+  background-color: rgba(246, 247, 251, 0.85) !important;
+}
+
+html:not(.dark) .bg-\[\#07070c\]\/95,
+html:not(.dark) .bg-\[\#0a0a12\]\/95 {
+  background-color: rgba(246, 247, 251, 0.95) !important;
+}
+
+html:not(.dark) .text-white {
+  color: #10121a !important;
+}
+
+html:not(.dark) [class*="text-white/"] {
+  color: rgba(16, 18, 26, 0.62) !important;
+}
+
+html:not(.dark) [class*="bg-white/"] {
+  background-color: rgba(16, 18, 26, 0.045) !important;
+}
+
+html:not(.dark) [class*="border-white/"] {
+  border-color: rgba(16, 18, 26, 0.12) !important;
+}
+
+html:not(.dark) .bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(16, 18, 26, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 18, 26, 0.05) 1px, transparent 1px);
+}
+
+html:not(.dark) option {
+  color: #10121a;
+  background: #ffffff;
+}
+
+/* Keep white text legible on top of saturated gradient brand surfaces */
+html:not(.dark) [class*="bg-gradient-to"].text-white,
+html:not(.dark) [class*="bg-gradient-to"] .text-white {
+  color: #ffffff !important;
+}
+
+html:not(.dark) ::selection {
+  background: #6366f1;
+  color: white;
+}
+

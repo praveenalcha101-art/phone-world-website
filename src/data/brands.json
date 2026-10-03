@@ -1,0 +1,16 @@
+[
+  { "id": "apple", "name": "Apple", "color": "#a1a1aa" },
+  { "id": "samsung", "name": "Samsung", "color": "#1d4ed8" },
+  { "id": "google", "name": "Google", "color": "#ea4335" },
+  { "id": "oneplus", "name": "OnePlus", "color": "#eb0028" },
+  { "id": "xiaomi", "name": "Xiaomi", "color": "#ff6900" },
+  { "id": "oppo", "name": "Oppo", "color": "#1bb04c" },
+  { "id": "vivo", "name": "Vivo", "color": "#415fff" },
+  { "id": "realme", "name": "Realme", "color": "#fcd700" },
+  { "id": "motorola", "name": "Motorola", "color": "#6b46c1" },
+  { "id": "nothing", "name": "Nothing", "color": "#e5e5e5" },
+  { "id": "huawei", "name": "Huawei", "color": "#c7000b" },
+  { "id": "sony", "name": "Sony", "color": "#00a0e0" },
+  { "id": "asus", "name": "Asus", "color": "#0078d6" },
+  { "id": "nokia", "name": "Nokia", "color": "#124191" }
+]
